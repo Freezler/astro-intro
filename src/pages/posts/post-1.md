@@ -10,6 +10,7 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
+<link rel="stylesheet" href="/styles.css" />
 # My First Blog Post
 
 Published on: 2022-07-01

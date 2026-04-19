@@ -10,18 +10,22 @@
 }
 
 html {
-    font-family: "Inter", sans-serif;
-    font-size: 1.125rem;
-}
-body {
-    line-height: 1.6;
-    margin-inline: 3rem;
-    background-color: #b94a4a;
-    text-align: center;
+    margin: 0;
 }
 
-p {
-    color: #fff;
-    max-inline-size: 600px;
-    margin-inline: auto;
+body {
+    font-size: 1.125rem;
+    font-family: "Inter", sans-serif;
+
+    padding: 2rem;
+    background-color: #f0f0f0;
+}
+
+.section {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
 }
