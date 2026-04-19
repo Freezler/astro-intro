@@ -1,22 +1,57 @@
 ---
+const pageTitle = "About Me";
 
+const identity = {
+    firstName: "Randy",
+    country: "Netherlands",
+    occupation: "LSC allround employee",
+    hobbies: ["Coding", "Nature walking", "chilling with friends"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro about page</title>
+        <title>{pageTitle}</title>
         <link rel="stylesheet" href="/styles.css" />
     </head>
     <body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-        <h1>Astro intro about page</h1>
-        <p>This is the about page for my Astro intro application.</p>
+        <h1>{pageTitle}</h1>
+        <h2>... and my new Astro site!</h2>
+
+        <p>
+            i'm a {identity.occupation} from the {identity.country} who enjoys {
+                identity.hobbies.join(", ").replace(/, ([^,]*)$/, " and $1")
+            }. I created this Astro site to document my learning journey and
+            share my experiences with others who are interested in web
+            development and Astro.
+        </p>
+        <p>
+            {skills.join(", ").replace(/, ([^,]*)$/, " and $1")} are some of the skills
+            I have acquired during my learning journey. I am excited to continue expanding
+            my knowledge and sharing my experiences with others through this Astro
+            site.
+        </p>
+
+        {happy && <p>I am happy to be learning Astro!</p>}
+
+        {finished && <p>I finished this tutorial!</p>}
+
+        {
+            goal === 3 ? (
+                <p>My goal is to finish in 3 days.</p>
+            ) : (
+                <p>My goal is not 3 days.</p>
+            )
+        }
     </body>
 </html>
